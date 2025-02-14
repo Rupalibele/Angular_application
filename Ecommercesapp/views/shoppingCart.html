@@ -1,0 +1,34 @@
+<div ng-controller="ShoppingCartController as vm">
+    <h2>Shopping Cart</h2>
+
+    <div ng-if="vm.cart.length === 0">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <div ng-if="vm.cart.length > 0">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vm.cart">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price | currency }}</td>
+                    <td>
+                        <img ng-src="{{ item.image }}" alt="{{ item.name }}" width="50">
+                    </td>
+                    <td>
+                        <button ng-click="vm.removeFromCart(item)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Total: {{ vm.getTotal() | currency }}</h3>
+    </div>
+</div>

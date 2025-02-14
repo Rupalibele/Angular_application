@@ -1,0 +1,19 @@
+{
+  "name": "ecommercesapp",
+  "version": "1.0.0",
+  "description": "Ecommerce app shppoping cart",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "rupali bele",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.8.9",
+    "@types/angular-route": "^1.7.6"
+  }
+}

@@ -1,0 +1,12 @@
+<div ng-controller="ProductCatalogController as vm">
+    <h2>Product Catalog</h2>
+    <div ng-repeat="product in vm.products">
+        <h3>{{ product.name }}</h3>
+        <p>Price: {{ product.price | currency }}</p>
+        <img ng-src="{{ product.image }}" alt="{{ product.name }}" width="100">
+        <p>{{ product.description }}</p>
+        <button ng-click="vm.addToCart(product)">Add to Cart</button>
+    </div>
+
+    <a href="#!/shopping-cart">Go to Cart</a>
+</div>

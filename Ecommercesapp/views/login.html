@@ -1,0 +1,71 @@
+
+
+<html>
+
+
+<head>
+    <title>E-commerce Login</title>
+    
+    <script src="../angular.min.js"></script>
+    <script src="../angular-route.min.js"></script>
+    <script src="../dist/app.module.js"></script>
+    <script src="../dist/controllers/auth.Controller.js"></script>
+    
+   
+
+</head>
+
+
+<body ng-app="myApp">
+
+
+    <div ng-controller="MyFirstController as vm">
+        <h1>TFL Store</h1>
+       
+        <hr>
+        <div>
+            <div>
+                <ol>
+                    <li ng-repeat="user in vm.users">
+                        {{ user.email }} - {{ user.password }}
+                    </li>
+                </ol>
+                
+            </div>  
+
+
+                        <table>
+                            <tr>
+                                <td><label>Email</label></td>
+                                <td>
+                                    <input type="text" name="email" id="email" ng-model="user.email" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Password</label></td>
+                                <td>
+                                    <input type="text" name="password" id="password" ng-model="user.password" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button ng-click="vm.onValidate()" id="btnLogin">Login</button>
+                                </td>
+                            </tr>
+                        </table>
+            <label id="message"></label>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+
+
+
+
+
+</html>
