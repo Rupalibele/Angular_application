@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./modules/product.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Store</h1>
+    <div class="container" ng-app="transflower" ng-controller="ProductController">
+        <form ng-submit="addProduct()">
+            <label>Product Id</label>
+            <input type="text" ng-model="product.productId" required />
+
+            <label>Product Name</label>
+            <input type="text" ng-model="product.productName" required />
+
+            <label>Product Price</label>
+            <input type="text" ng-model="product.productPrice" required />
+
+            <label>Product Description</label>
+            <input type="text" ng-model="product.productDescription" required />
+
+            <button type="submit">Add Product</button>
+        </form>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <tr ng-repeat="product in products">
+                <td>{{ product.productId }}</td>
+                <td>{{ product.productName }}</td>
+                <td>{{ product.productPrice }}</td>
+                <td>{{ product.productDescription }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
