@@ -33,5 +33,5 @@ var ProductController = /** @class */ (function () {
     ProductController.$inject = ['$scope'];
     return ProductController;
 }());
-export { ProductController };
+
 //angular.module('myApp').controller('MyController', MyController);

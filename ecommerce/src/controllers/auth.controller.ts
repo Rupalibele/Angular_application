@@ -9,7 +9,7 @@ export class AuthController {
   constructor(private $scope: IDataScope) {
     this.message = 'Welcome to TypeScript!';
     this.users=[
-      { name: 'Shaikh Nasir', email: 'nasir@gmail.com' },
+      { name: 'rupali bele', email: 'rupali@gmail.com' },
     ];
     
     $scope['data'] = this;

@@ -9,7 +9,7 @@ export class ShoppingCartController {
   constructor(private $scope: IDataScope) {
     this.message = 'Welcome to TypeScript!';
     this.users=[
-      { name: 'Shaikh Nasir', email: 'nasir@gmail.com' },
+      { name: 'Rupali Bele', email: 'rupali@gmail.com' },
     ];
     
     $scope['data'] = this;

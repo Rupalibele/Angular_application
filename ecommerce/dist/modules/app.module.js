@@ -1,8 +1,4 @@
-import * as angular from "angular";
-import 'angular-route';
-import { ProductController } from "../controllers/product.controller";
-import { AuthController } from "../controllers/auth.controller";
-import { ShoppingCartController } from "../controllers/shopingcart.controller";
+
 var appModule = angular.module('ecommerce', ['ngRoute']);
 appModule.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
