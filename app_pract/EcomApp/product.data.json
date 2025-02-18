@@ -1,0 +1,58 @@
+[
+    {
+        "id": "01",
+        "name": "IKIGAI",
+        "price": 1500,
+        "imgSrc": "assets/images/IKIGAI.jpg",
+        "description": "Ikigai: Japanese secret to long and happy life"
+    },
+    {
+        "id": "02",
+        "name": "Ng-Book",
+        "price": 4000,
+        "imgSrc": "assets/images/Ng-Book.jpg",
+        "description": "Ng-Book: The Complete Book on Angularjs"
+    },
+    {
+        "id": "03",
+        "name": "Atomic Habits",
+        "price": 5000,
+        "imgSrc": "assets/images/Atomic_Habits.jpg",
+        "description": "Atomic Habits is a step-by-step manual for changing routines."
+    },
+    {
+        "id": "04",
+        "name": "The_Alchemist",
+        "price": 1500,
+        "imgSrc": "assets/images/The_Alchemist.jpg",
+        "description": "his story, dazzling in its powerful simplicity and inspiring wisdom"
+    },
+    {
+        "id": "05",
+        "name": "Rich Dad Poor Dad",
+        "price": 4000,
+        "imgSrc": "assets/images/Rich Dad Poor Dad.JPG",
+        "description": "What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!"
+    },
+    {
+        "id": "06",
+        "name": "The Miracle Morning",
+        "price": 1000,
+        "imgSrc": "assets/images/The Miracle Morning.jpg",
+        "description": "The 6 Habits That Will Transform Your Life Before 8AM"
+    },
+    {
+        "id": "07",
+        "name": "The Power of Your Subconscious Mind",
+        "price": 800,
+        "imgSrc": "assets/images/The_Power_of Your Subconscious Mind.JPG",
+        "description": "The Power of Your Subconscious Mind"
+    },
+    {
+        "id": "08",
+        "name": "Think & Grow Rich",
+        "price": 700,
+        "imgSrc": "assets/images/Think & Grow Rich.JPG",
+        "description": "Hill established the Foundation as a nonprofit educational institution whose mission is to perpetuate his philosophy of leadership, self-motivation, and individual achievement"
+    }
+]

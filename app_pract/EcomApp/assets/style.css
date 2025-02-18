@@ -1,0 +1,77 @@
+/* Product Card Styles */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add to Cart Button */
+.product-btn-add {
+    background-color: #ff6600; /* Bright orange background */
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product-btn-add:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.product-btn-add:active {
+    background-color: #cc5200; /* Even darker on click */
+    transform: translateY(1px); /* Button press effect */
+}
+
+/* Product Quantity Control */
+.product-quantity-control button {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.product-quantity-control button:hover {
+    background-color: #e6e6e6;
+}
+
+/* Font weight adjustments for better visibility */
+.product-title {
+    font-weight: 600;
+    color: #333;
+}
+
+.product-price {
+    color: #777;
+}
+
+/* Responsive Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        justify-content: center;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Custom hover effect for card */
+.product-card:hover .product-image {
+    transform: scale(1.05); /* Zoom effect on image */
+    transition: transform 0.3s ease;
+}

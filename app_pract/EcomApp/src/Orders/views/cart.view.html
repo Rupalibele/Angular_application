@@ -1,0 +1,61 @@
+<div class="product-container" style="background-color: #f0f0f0; padding: 20px;"> <!-- Updated background color -->
+    <h2 class="text-center my-4 font-weight-bold">Your Cart</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6"> <!-- Reduced size of the cart box -->
+            <div class="product-card shadow-lg p-4 mb-4 bg-light rounded">
+                <div class="product-card-body card-body">
+                    <!-- Empty Cart Message -->
+                    <div ng-if="vm.cart.length === 0" class="text-center">
+                        <h5 class="text-muted font-italic">Your cart is currently empty.</h5>
+                        <a href="#!/products" class="btn btn-custom-primary btn-lg mt-3">Start Shopping</a>
+                    </div>
+
+                    <!-- Cart Items -->
+                    <div class="list-group" ng-if="vm.cart.length > 0">
+                        <div ng-repeat="product in vm.cart" 
+                            class="list-group-item d-flex align-items-center product-item shadow-sm mb-3 rounded"
+                            style="min-height: 150px;"> 
+                            
+                            <!-- Product Image -->
+                            <div class="product-image-container" style="width: 100px; height: 100px; overflow: hidden;">
+                                <img class="product-image rounded" ng-src="{{ product.imgSrc }}" alt="{{ product.name }}" 
+                                     style="width: 100px; height: 100px; object-fit: cover;">
+                            </div>
+
+                            <!-- Product Details -->
+                            <div class="product-details flex-grow-1 ml-3">
+                                <h5 class="product-title font-weight-bold">{{ product.name }}</h5>
+                                <p class="product-price text-muted">₹{{ product.price }}</p>
+
+                                <!-- Quantity Control -->
+                                <div class="product-quantity-control d-flex align-items-center">
+                                    <button class="btn btn-sm btn-custom-secondary product-quantity-btn" ng-click="vm.updateQuantity(product, -1)">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                    <span class="product-quantity mx-2 font-weight-bold">{{ product.quantity }}</span>
+                                    <button class="btn btn-sm btn-custom-primary product-quantity-btn" ng-click="vm.updateQuantity(product, 1)">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- Remove Button -->
+                                <button class="btn btn-custom-danger btn-sm product-remove-btn mt-2" ng-click="vm.removeFromCart(product)">
+                                    <i class="fa fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Summary -->
+                    <div class="mt-4 text-right" ng-if="vm.cart.length > 0">
+                        <h4 class="font-weight-bold">Total: ₹{{ vm.getCartTotal() }}</h4>
+                        <button class="btn btn-custom-success btn-lg mt-2" style="background-color: #28a745; border-color: #28a745;"> <!-- Custom button color -->
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

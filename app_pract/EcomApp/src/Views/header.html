@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" ng-controller="ProductController as vm" style="background: linear-gradient(135deg, #007bff, #0056b3);">
+    <a class="navbar-brand text-white font-weight-bold" href="#"></a>   
+
+    <form class="form-inline mx-auto" ng-submit="vm.setSearchQuery()">
+        <input class="form-control mr-sm-2 border-0 shadow-sm px-3" type="search" placeholder="Search books..." aria-label="Search"
+            ng-model="vm.searchQuery" style="border-radius: 4px;">
+        <button class="btn btn-light my-2 my-sm-0 shadow-sm" type="submit">
+            <i class="fa fa-search"></i> Search
+        </button>
+    </form>
+
+    <div class="d-flex ml-auto">
+        <!-- User Actions when Logged In -->
+        <div class="d-flex align-items-center" ng-if="vm.loggedInUser">
+            <a href="#!/cart" class="btn btn-warning mx-2 shadow-sm">
+                <i class="fa fa-shopping-cart"></i> Cart ({{ vm.cart.length }})
+            </a>        
+            <div class="d-flex align-items-center text-white mx-2">
+                <i class="fa fa-user-circle fa-lg mr-2"></i>
+                <span>{{ vm.loggedInUser.name }}</span>
+            </div>        
+            <button class="btn btn-danger mx-2 shadow-sm" ng-click="vm.logout()">Logout</button>
+        </div>        
+
+        <!-- Guest Actions when Not Logged In -->
+        <div class="ml-auto" ng-if="!vm.loggedInUser">
+            <a href="#!/login" class="btn btn-outline-light mx-2 shadow-sm">Login</a>
+            <a href="#!/register" class="btn btn-outline-light mx-2 shadow-sm">Register</a>
+        </div>
+    </div>
+</nav>
